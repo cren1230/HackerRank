@@ -21,9 +21,10 @@ string timeConversion(string s) {
 		if (hh != 12)
 		{
 			hh += 12;
-			ostringstream oss;
-			oss << hh;
-			hours = oss.str();
+//			ostringstream oss;
+//			oss << hh;
+//			hours = oss.str();
+			hours = to_string(hh);
 		}
 	}
 
@@ -33,7 +34,6 @@ string timeConversion(string s) {
 int main() {
     string s;
     cin >> s;
-    //s="11:23:23PM";
     string result = timeConversion(s);
     cout << result << endl;
     return 0;
